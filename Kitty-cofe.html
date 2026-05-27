@@ -7,66 +7,61 @@
   <link rel="stylesheet" href="Kitty-cofe-style.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Перейти к основному контенту</a>
   <header>
     <div class="container">
       <h1>Purradise — Котокафе</h1>
       <p>Место, где аромат свежего кофе встречается с уютным мурчанием</p>
-      <nav>
+      <nav aria-label="Основная навигация">
         <ul>
-          <li><a href="#about">О кафе</a></li>
+          <li><a href="#about" aria-current="page">О кафе</a></li>
           <li><a href="#menu">Меню</a></li>
           <li><a href="#cats">Котики</a></li>
           <li><a href="#schedule">Расписание</a></li>
           <li><a href="#events">События</a></li>
           <li><a href="#history">История</a></li>
-          <li><a href="#contact">Контакты</a></li>
+          <li><a href="#reservation">Бронирование</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <aside id="promo">
-      <h4>Акция дня</h4>
+  <main id="main-content" class="container">
+    <aside id="promo" aria-label="Акции">
+      <h4>🐾 Акция дня</h4>
       <p><time datetime="2026-03-19">19 марта 2026</time></p>
-      <p>Капучино + 30 минут с котиками = 350₽</p>
+      <p class="highlight">Капучино + 30 минут с котиками = <strong>350₽</strong></p>
       <small>Следите за новостями в соцсетях!</small>
     </aside>
 
-    <section id="about">
-      <h2>О нашем кафе</h2>
-      <article id="history-intro">
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">О нашем кафе</h2>
+      <article>
         <h3>История Purradise</h3>
         <p>Мы открылись в 2022 году с простой идеей: создать место, где люди могут наслаждаться премиальным кофе в компании пушистых друзей.</p>
         <blockquote>
           Кофе согревает тело, а котики согревают душу.
           <cite>— Основатель кафе, Михаил Котовский</cite>
         </blockquote>
-        <p>За время работы нас посетили более 15 000 гостей, а наши котики получили лучшее место для релаксации по версии городского журнала.</p>
       </article>
-
-      <article id="rules">
+      <article>
         <h3>Правила посещения</h3>
         <ul>
           <li>Мойте руки перед входом в зону с котиками</li>
           <li>Не будите спящих котов</li>
           <li>Используйте только наши лакомства для кормления</li>
           <li>Детям до 7 лет — только под присмотром взрослых</li>
-          <li>Вход с собственными животными запрещён</li>
         </ul>
       </article>
     </section>
 
-    <section id="menu">
-      <h2>Меню</h2>
+    <section id="menu" aria-labelledby="menu-heading">
+      <h2 id="menu-heading">Меню</h2>
       <article>
-        <h3>Наши напитки и десерты</h3>
-        <h4>Кофейные напитки</h4>
+        <h3>Кофейные напитки</h3>
         <table>
           <caption>Наши фирменные напитки</caption>
-          <thead>
-            <tr><th>Название</th><th>Объём</th><th>Цена</th></tr>
-          </thead>
+          <thead><tr><th>Название</th><th>Объём</th><th>Цена</th></tr></thead>
           <tbody>
             <tr><td>Эспрессо</td><td>30 мл</td><td>150₽</td></tr>
             <tr><td>Капучино</td><td>200 мл</td><td>250₽</td></tr>
@@ -74,124 +69,138 @@
             <tr><td>Флэт уайт</td><td>150 мл</td><td>270₽</td></tr>
             <tr><td>Раф Мурчащий</td><td>250 мл</td><td>320₽</td></tr>
           </tbody>
-          <tfoot>
-            <tr><td colspan="3">Цены могут меняться в зависимости от сезона</td></tr>
-          </tfoot>
+          <tfoot><tr><td colspan="3"><em>Цены могут меняться в зависимости от сезона</em></td></tr></tfoot>
         </table>
       </article>
       <article>
-        <h4>Десерты</h4>
-        <ul>
-          <li>Чизкейк Нью-Йорк — Классический рецепт с нежным сливочным вкусом</li>
-          <li>Тирамису — Итальянский десерт с эспрессо и маскарпоне</li>
-          <li>Круассан с миндалём — Свежая выпечка каждое утро</li>
-        </ul>
+        <h3>Десерты</h3>
+        <div class="menu-grid">
+          <span class="menu-item">Чизкейк Нью-Йорк</span>
+          <span class="menu-item">Тирамису</span>
+          <span class="menu-item">Круассан с миндалём</span>
+        </div>
       </article>
     </section>
 
-    <section id="cats">
-      <h2>Наши котики</h2>
+    <section id="cats" aria-labelledby="cats-heading">
+      <h2 id="cats-heading">Наши котики</h2>
       <div class="cat-grid">
         <article class="cat-card">
-          <img src="https://placekitten.com/120/120" alt="Бариста — главный по настроению">
+          <figure>
+            <img src="https://placekitten.com/150/150" alt="Бариста — главный по настроению" loading="lazy">
+            <figcaption>Возраст: 4 года</figcaption>
+          </figure>
           <h3>Бариста</h3>
-          <p><strong>Возраст:</strong> 4 года</p>
-          <p><strong>Характер:</strong> общительный, любит гостей</p>
+          <p>Общительный, любит гостей</p>
         </article>
         <article class="cat-card">
-          <img src="https://placekitten.com/121/121" alt="Латте — белоснежная нежность">
+          <figure>
+            <img src="https://placekitten.com/151/151" alt="Латте — белоснежная нежность" loading="lazy">
+            <figcaption>Возраст: 2 года</figcaption>
+          </figure>
           <h3>Латте</h3>
-          <p><strong>Возраст:</strong> 2 года</p>
-          <p><strong>Особенности:</strong> стерилизована, привита</p>
+          <p>Стерилизована, привита</p>
         </article>
         <article class="cat-card">
-          <img src="https://placekitten.com/122/122" alt="Эспрессо — энергия в чистом виде">
+          <figure>
+            <img src="https://placekitten.com/152/152" alt="Эспрессо — энергия в чистом виде" loading="lazy">
+            <figcaption>Возраст: 1.5 года</figcaption>
+          </figure>
           <h3>Эспрессо</h3>
-          <p><strong>Возраст:</strong> 1.5 года</p>
-          <p><strong>Статус:</strong> Ищет активных друзей</p>
+          <p>Ищет активных друзей</p>
         </article>
         <article class="cat-card">
-          <img src="https://placekitten.com/123/123" alt="Капучино — философ и мечтатель">
+          <figure>
+            <img src="https://placekitten.com/153/153" alt="Капучино — философ и мечтатель" loading="lazy">
+            <figcaption>Возраст: 6 лет</figcaption>
+          </figure>
           <h3>Капучино</h3>
-          <p><strong>Возраст:</strong> 6 лет</p>
-          <p><strong>Статус:</strong> Старейшина кафе</p>
+          <p>Старейшина кафе</p>
         </article>
       </div>
     </section>
 
-    <section id="schedule">
-      <h2>Расписание работы</h2>
+    <section id="schedule" aria-labelledby="schedule-heading">
+      <h2 id="schedule-heading">Расписание работы</h2>
       <table>
         <caption>Часы работы котокафе</caption>
-        <thead>
-          <tr><th>День недели</th><th>Кофейная зона</th><th>Зона с котиками</th></tr>
-        </thead>
+        <thead><tr><th>День недели</th><th>Кофейная зона</th><th>Зона с котиками</th></tr></thead>
         <tbody>
-          <tr><td>Понедельник — Пятница</td><td>08:00 — 22:00</td><td>10:00 — 20:00</td></tr>
-          <tr><td>Суббота</td><td>09:00 — 23:00</td><td>10:00 — 21:00</td></tr>
-          <tr><td>Воскресенье</td><td>10:00 — 22:00</td><td>11:00 — 19:00</td></tr>
+          <tr><td>Пн — Пт</td><td>08:00 — 22:00</td><td>10:00 — 20:00</td></tr>
+          <tr><td>Сб</td><td>09:00 — 23:00</td><td>10:00 — 21:00</td></tr>
+          <tr><td>Вс</td><td>10:00 — 22:00</td><td>11:00 — 19:00</td></tr>
         </tbody>
       </table>
     </section>
 
-    <section id="reservation">
-      <h2>Бронирование</h2>
-      <form id="booking-form" action="#" method="POST">
+    <section id="reservation" aria-labelledby="reservation-heading">
+      <h2 id="reservation-heading">Бронирование</h2>
+      <form id="booking-form" action="#" method="POST" novalidate>
         <fieldset>
-          <legend>Данные гостя</legend>
-          <label for="name">Ваше имя: *</label>
-          <input type="text" id="name" name="name" required>
-
-          <label for="email">Email: *</label>
-          <input type="email" id="email" name="email" required>
-
-          <label for="phone">Телефон:</label>
-          <input type="tel" id="phone" name="phone">
-
-          <label for="guests">Количество гостей:</label>
-          <select id="guests" name="guests">
-            <option value="1">1 гость</option>
-            <option value="2">2 гостя</option>
-            <option value="3">3 гостя</option>
-            <option value="4">4 гостя</option>
-            <option value="5">5 гостей</option>
-            <option value="6+">6 и более</option>
-          </select>
+          <legend>Контактные данные</legend>
+          <div class="form-group">
+            <label for="name">Ваше имя <span class="required">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Иван Иванов" required aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="ivan@example.com" required aria-required="true" aria-describedby="email-hint">
+            <small id="email-hint" class="form-hint">На этот адрес придёт подтверждение</small>
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (999) 000-00-00">
+          </div>
         </fieldset>
 
         <fieldset>
           <legend>Параметры визита</legend>
-          <label for="zone">Предпочитаемая зона:</label>
-          <select id="zone" name="zone">
-            <option value="window">Место у окна</option>
-            <option value="quiet">Тихий уголок</option>
-            <option value="main">Основной зал</option>
-          </select>
-
-          <label for="date">Дата посещения:</label>
-          <input type="date" id="date" name="date" required>
-
-          <label for="time">Время:</label>
-          <input type="time" id="time" name="time" required>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="guests">Гостей</label>
+              <select id="guests" name="guests">
+                <option value="1">1</option><option value="2" selected>2</option>
+                <option value="3">3</option><option value="4">4</option>
+                <option value="5+">5+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="zone">Зона</label>
+              <select id="zone" name="zone">
+                <option value="window">У окна</option><option value="quiet">Тихая</option>
+                <option value="main">Общая</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Дата <span class="required">*</span></label>
+              <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+              <label for="time">Время <span class="required">*</span></label>
+              <input type="time" id="time" name="time" required>
+            </div>
+          </div>
         </fieldset>
 
-        <button type="submit">Забронировать</button>
-        <button type="reset">Очистить</button>
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Забронировать</button>
+          <button type="reset" class="btn-secondary">Сбросить</button>
+        </div>
+        <p class="form-notice"><span class="required">*</span> — обязательные поля</p>
       </form>
-      <p><small>* — обязательные поля</small></p>
     </section>
   </main>
 
   <footer>
     <div class="container">
       <p>© 2026 Purradise. Все права защищены.</p>
-      <p>Сделано с любовью к кофе и котикам</p>
-      <nav>
-        <a href="#">VK</a> | <a href="#">Telegram</a> | <a href="#">Instagram</a>
+      <nav aria-label="Социальные сети">
+        <a href="#" aria-label="VK">VK</a> | <a href="#" aria-label="Telegram">Telegram</a> | <a href="#" aria-label="Instagram">Instagram</a>
       </nav>
     </div>
   </footer>
-
   <script src="image-manager.js"></script>
 </body>
 </html>
